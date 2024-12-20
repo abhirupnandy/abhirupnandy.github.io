@@ -25,6 +25,8 @@
 				},
 			}
 		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 	</head>
 	<body class="bg-gray-50 text-gray-800 font-roboto">
 		<!-- Navbar Start -->
@@ -158,16 +160,58 @@
 		<section id="publications" class="py-20 bg-gray-50">
 			<div class="container mx-auto px-4">
 				<h2 class="text-4xl font-bold text-center text-primary-500 mb-12">Publications</h2>
-				<div class="max-w-3xl mx-auto space-y-6">
-					<a href="https://doi.org/10.1016/j.eswa.2022.118317" target="_blank" class="block bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-						<h3 class="text-lg font-semibold text-primary-500 hover:text-primary-600"> Expertise-based Framework for Research Portfolio Management </h3>
-					</a>
-					<a href="https://www.indianscience.net/" target="_blank" class="block bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-						<h3 class="text-lg font-semibold text-primary-500 hover:text-primary-600"> Indian Science Reports: Bibliometric Portal </h3>
-					</a>
-					<a href="https://scholar.google.com/citations?user=ZhEuoj4AAAAJ" target="_blank" class="block bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-						<h3 class="text-lg font-semibold text-primary-500 hover:text-primary-600"> View All Publications on Google Scholar </h3>
-					</a>
+				<div class="publication-slider max-w-5xl mx-auto">
+					<div class="slider-container">
+						<!-- Publication 1 -->
+						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-full">
+							<p class="text-gray-500 text-sm mb-2">2024</p>
+							<h3 class="text-lg font-semibold text-primary-500 mb-3">Bibliographic Coupling and Conceptual Similarity</h3>
+							<p class="text-gray-600 text-sm mb-4">Are the Bibliographically Coupled Papers also Conceptually Similar? Journal of Scientometric Research, 13(3), 706–714.</p>
+							<div class="text-gray-500 text-sm italic">Nandy, A., Singh, A., Gupta, V., & Singh, V. K.</div>
+						</div>
+						<!-- Publication 2 -->
+						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-full">
+							<p class="text-gray-500 text-sm mb-2">2024</p>
+							<h3 class="text-lg font-semibold text-primary-500 mb-3">xd-index and its variants</h3>
+							<p class="text-gray-600 text-sm mb-4">A set of overall scholarly expertise diversity indices for the research portfolio management of institutions. Scientometrics.</p>
+							<div class="text-gray-500 text-sm italic">Nandy, A., Lathabai, H. H., & Singh, V. K.</div>
+						</div>
+						<!-- Publication 3 -->
+						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-full">
+							<p class="text-gray-500 text-sm mb-2">2023</p>
+							<h3 class="text-lg font-semibold text-primary-500 mb-3">AI-Generated Text Detection</h3>
+							<p class="text-gray-600 text-sm mb-4">Towards a large sized curated and annotated corpus for discriminating between human-written and AI-generated texts. Natural Language Processing Journal.</p>
+							<div class="text-gray-500 text-sm italic">Singh, A., Sharma, D., Nandy, A., & Singh, V. K.</div>
+						</div>
+						<!-- Publication 4 -->
+						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-full">
+							<p class="text-gray-500 text-sm mb-2">2022</p>
+							<h3 class="text-lg font-semibold text-primary-500 mb-3">Institutional Collaboration Framework</h3>
+							<p class="text-gray-600 text-sm mb-4">An expertise-based framework using NLP and network analysis. Expert Systems with Applications, 209, 118317.</p>
+							<div class="text-gray-500 text-sm italic">Lathabai, H. H., Nandy, A., & Singh, V. K.</div>
+						</div>
+						<!-- Publication 5 -->
+						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-full">
+							<p class="text-gray-500 text-sm mb-2">2022</p>
+							<h3 class="text-lg font-semibold text-primary-500 mb-3">Indian Science Reports</h3>
+							<p class="text-gray-600 text-sm mb-4">A web-based scientometric portal for mapping Indian research competencies. Scientometrics, 127(7), 4227–4236.</p>
+							<div class="text-gray-500 text-sm italic">Singh, V. K., Nandy, A., et al.</div>
+						</div>
+						<!-- View All Link -->
+						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-full flex items-center justify-center">
+							<a href="https://scholar.google.com/citations?user=ZhEuoj4AAAAJ" target="_blank" class="text-lg font-semibold text-primary-500 hover:text-primary-600 transition"> View All Publications <br>on Google Scholar <i class="fas fa-external-link-alt ml-2"></i>
+							</a>
+						</div>
+					</div>
+					<!-- Navigation Arrows -->
+					<div class="flex justify-center mt-6 space-x-4">
+						<button class="prev-button bg-primary-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-primary-600 transition">
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button class="next-button bg-primary-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-primary-600 transition">
+							<i class="fas fa-chevron-right"></i>
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -183,5 +227,30 @@
 				</div>
 			</div>
 		</section>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				let slider = tns({
+					container: '.slider-container',
+					items: 1,
+					slideBy: 'page',
+					autoplay: false,
+					controls: true,
+					nav: false,
+					controlsContainer: '.publication-slider',
+					prevButton: '.prev-button',
+					nextButton: '.next-button',
+					responsive: {
+						640: {
+							items: 2
+						},
+						1024: {
+							items: 3
+						}
+					},
+					gutter: 20,
+					loop: true
+				});
+			});
+		</script>
 	</body>
 </html>
