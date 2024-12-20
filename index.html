@@ -27,6 +27,32 @@
 		</script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				let slider = tns({
+					container: '.slider-container',
+					items: 1,
+					slideBy: 'page',
+					autoplay: false,
+					controls: true,
+					nav: false,
+					controlsContainer: '.publication-slider',
+					prevButton: '.prev-button',
+					nextButton: '.next-button',
+					responsive: {
+						640: {
+							items: 2
+						},
+						1024: {
+							items: 3
+						}
+					},
+					gutter: 20,
+					loop: true
+				});
+			});
+
+		</script>
 	</head>
 	<body class="bg-gray-50 text-gray-800 font-roboto">
 		<!-- Navbar Start -->
