@@ -115,28 +115,5 @@
     
 })(jQuery);
 
-			document.addEventListener('DOMContentLoaded', function() {
-				let slider = tns({
-					container: '.slider-container',
-					items: 1,
-					slideBy: 'page',
-					autoplay: false,
-					controls: true,
-					nav: false,
-					controlsContainer: '.publication-slider',
-					prevButton: '.prev-button',
-					nextButton: '.next-button',
-					responsive: {
-						640: {
-							items: 2
-						},
-						1024: {
-							items: 3
-						}
-					},
-					gutter: 20,
-					loop: true
-				});
-			});
-
+			
 
