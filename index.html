@@ -33,7 +33,8 @@
 					container: '.slider-container',
 					items: 1,
 					slideBy: 'page',
-					autoplay: false,
+					autoplay: true,
+					autoplayTimeout: 3000, // Auto slide every 3 seconds
 					controls: true,
 					nav: false,
 					controlsContainer: '.publication-slider',
@@ -51,7 +52,6 @@
 					loop: true
 				});
 			});
-
 		</script>
 	</head>
 	<body class="bg-gray-50 text-gray-800 font-roboto">
@@ -182,16 +182,14 @@
 				</div>
 			</div>
 		</section>
-		<!DOCTYPE html>
-		<!-- Previous head and body content remains the same until Publications section -->
 		<!-- Publications Start -->
 		<section id="publications" class="py-20 bg-gray-50">
 			<div class="container mx-auto px-4">
 				<h2 class="text-4xl font-bold text-center text-primary-500 mb-12">Publications</h2>
-				<div class="publication-slider max-w-5xl mx-auto">
+				<div class="publication-slider max-w-7xl mx-auto px-4">
 					<div class="slider-container">
 						<!-- Publication 1 -->
-						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
+						<div class="bg-white p-8 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
 							<div class="flex-1">
 								<p class="text-gray-500 text-sm mb-2">2024</p>
 								<h3 class="text-lg font-semibold text-primary-500 mb-3 line-clamp-2">Bibliographic Coupling and Conceptual Similarity</h3>
@@ -200,7 +198,7 @@
 							<div class="text-gray-500 text-sm italic mt-auto">Nandy, A., Singh, A., Gupta, V., & Singh, V. K.</div>
 						</div>
 						<!-- Publication 2 -->
-						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
+						<div class="bg-white p-8 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
 							<div class="flex-1">
 								<p class="text-gray-500 text-sm mb-2">2024</p>
 								<h3 class="text-lg font-semibold text-primary-500 mb-3 line-clamp-2">xd-index and its variants</h3>
@@ -209,7 +207,7 @@
 							<div class="text-gray-500 text-sm italic mt-auto">Nandy, A., Lathabai, H. H., & Singh, V. K.</div>
 						</div>
 						<!-- Publication 3 -->
-						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
+						<div class="bg-white p-8 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
 							<div class="flex-1">
 								<p class="text-gray-500 text-sm mb-2">2023</p>
 								<h3 class="text-lg font-semibold text-primary-500 mb-3 line-clamp-2">AI-Generated Text Detection</h3>
@@ -218,7 +216,7 @@
 							<div class="text-gray-500 text-sm italic mt-auto">Singh, A., Sharma, D., Nandy, A., & Singh, V. K.</div>
 						</div>
 						<!-- Publication 4 -->
-						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
+						<div class="bg-white p-8 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
 							<div class="flex-1">
 								<p class="text-gray-500 text-sm mb-2">2022</p>
 								<h3 class="text-lg font-semibold text-primary-500 mb-3 line-clamp-2">Institutional Collaboration Framework</h3>
@@ -227,7 +225,7 @@
 							<div class="text-gray-500 text-sm italic mt-auto">Lathabai, H. H., Nandy, A., & Singh, V. K.</div>
 						</div>
 						<!-- Publication 5 -->
-						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
+						<div class="bg-white p-8 rounded-xl shadow-md mx-2 h-[300px] flex flex-col">
 							<div class="flex-1">
 								<p class="text-gray-500 text-sm mb-2">2022</p>
 								<h3 class="text-lg font-semibold text-primary-500 mb-3 line-clamp-2">Indian Science Reports</h3>
@@ -236,7 +234,7 @@
 							<div class="text-gray-500 text-sm italic mt-auto">Singh, V. K., Nandy, A., et al.</div>
 						</div>
 						<!-- View All Link -->
-						<div class="bg-white p-6 rounded-xl shadow-md mx-2 h-[300px] flex flex-col items-center justify-center">
+						<div class="bg-white p-8 rounded-xl shadow-md mx-2 h-[300px] flex flex-col items-center justify-center">
 							<a href="https://scholar.google.com/citations?user=ZhEuoj4AAAAJ" target="_blank" class="text-lg font-semibold text-primary-500 hover:text-primary-600 transition text-center"> View All Publications <br>on Google Scholar <i class="fas fa-external-link-alt ml-2"></i>
 							</a>
 						</div>
